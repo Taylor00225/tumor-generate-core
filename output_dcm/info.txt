@@ -1,0 +1,42 @@
+2024-05-08T02:12:28.935075100+08:00[Asia/Shanghai]
+DemoPath=G:\PySouces\demo
+demo.bat: Create data json
+['liver_00_0000.nii.gz']
+{'image': './imagesTr/liver_00_0000.nii.gz', 'label': './labelsTr/liver_00.nii.gz'}
+demo.bat: Json created
+demo.bat: Start generate tumor
+Loaded 1 file(s):
+[{'image': 'G:\\PySouces\\demo\\data\\imagesTr\\liver_00_0000.nii.gz', 'label': 'G:\\PySouces\\demo\\data\\labelsTr\\liver_00.nii.gz'}]
+Tumor_type : tiny
+Starting!
+Shape generation starting.
+Shape generated.
+Texture generation starting.
+Texture generated.
+Combining Shape and texture starting.
+Shape and texture combined.
+Post-processing starting.
+-Mass effects generation starting.
+--Total 9 tumors need to be generated.
+---Totally finished 1
+---Totally finished 2
+---Totally finished 3
+---Totally finished 4
+---Totally finished 5
+---Totally finished 6
+---Totally finished 7
+---Totally finished 8
+---Totally finished 9
+-Mass effects generated.
+-Capsule appearance generation starting.
+-Capsule appearance generated.
+Finish!
+2024-05-08 02:14:47,371 INFO image_writer.py:197 - writing: G:\PySouces\demo\output\imagesTr\liver_00_0000_trans.nii.gz
+2024-05-08 02:14:53,313 INFO image_writer.py:197 - writing: G:\PySouces\demo\output\labelsTr\liver_00_trans.nii.gz
+done
+demo.bat: Generation complete
+Loaded images:
+['liver_00_0000_trans.nii.gz']
+Loaded labels:
+['liver_00_trans.nii.gz']
+demo.bat: Done!

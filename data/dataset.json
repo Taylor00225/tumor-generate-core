@@ -1,0 +1,27 @@
+{
+    "description": " Segmentation",
+    "file_ending": ".nii.gz",
+    "labels": {
+        "Background": 0,
+        "liver": 1
+    },
+    "licence": "see challenge website",
+    "modality": {
+        "0": "CT"
+    },
+    "name": "PC",
+    "numTest": 1,
+    "numTraining": 1,
+    "reference": "see challenge website",
+    "release": "0.0",
+    "tensorImageSize": "3D",
+    "test": [
+        "./imagesTs/liver_00_0000.nii.gz"
+    ],
+    "training": [
+        {
+            "image": "./imagesTr/liver_00_0000.nii.gz",
+            "label": "./labelsTr/liver_00.nii.gz"
+        }
+    ]
+}

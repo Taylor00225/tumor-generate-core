@@ -49,8 +49,7 @@ class TumorGenerated(MapTransform, RandomizableTransform):
         sigma_a = np.std(d['image'][0])
         # if self._do_transform and (np.max(d['label']) <= 1):
         if self._do_transform:
-            # tumor_type = np.random.choice(self.tumor_types, p=self.tumor_prob.ravel())
-            tumor_type = 'tiny'
+            tumor_type = np.random.choice(self.tumor_types, p=self.tumor_prob.ravel())
             print(f"Tumor_type : {tumor_type}")
             print("Starting!")
             d['image'][0], d['label'][0] = SynthesisTumor(d['image'][0], d['label'][0], tumor_type, self.b)

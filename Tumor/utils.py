@@ -218,9 +218,10 @@ def get_tumor(volume_scan, mask_scan, tumor_type, b):
     print("Texture generated.")
 
     print("Combining Shape and texture starting.")
+    geo_blur_mask = np.where(geo_blur > 0.0, 1.0, 0.0)
     abnormally = (1 - geo_blur) * volume_scan
     abnormally_scan = abnormally + geo_blur * texture_scan
-    abnormally_mask = mask_scan + np.where(geo_blur > 0.0, 1.0, 0.0)  # bg: 0, liver: 1, tumor: 2
+    abnormally_mask = mask_scan + geo_blur_mask  # bg: 0, liver: 1, tumor: 2
     print("Shape and texture combined.")
 
     # test
